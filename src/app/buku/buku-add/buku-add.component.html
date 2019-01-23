@@ -1,0 +1,29 @@
+<h4>Add a New Book to Borrow</h4>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-group-row">
+        <label for="inputISBN" class="col-sm-3 form control-label">
+          ISBN {{inputInfo.isbn}} </label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" [(ngModel)]="inputInfo.isbn" id="inputISBN" value="{{bukuEditParent.isbn}}">
+        </div>
+      </div>
+      <div class="form-group-row">
+          <label for="inputNamaBuku" class="col-sm-3 form control-label">
+            Nama Buku {{inputInfo.namabuku}} </label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" [(ngModel)]="inputInfo.namabuku" #inputNamaBuku value="{{bukuEditParent.namabuku}}">
+          </div>
+        </div>
+        <div class="form-group-row">
+            <label for="inputJumlah" class="col-sm-3 form control-label">
+              Jumlah {{inputInfo.jumlah}} </label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" [(ngModel)]="inputInfo.jumlah" id="inputJumlah" value="{{bukuEditParent.jumlah}}">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success pull-right" (click)="tambahBuku(inputNamaBuku)"> Pilih </button>
+        </div>
+</div>
+</div>

@@ -1,0 +1,35 @@
+<table class="table table-bordered table-striped table-condensed">
+<thead>
+    <tr>
+      <th>
+        No
+      </th>
+      <th>
+          ISBN
+        </th>
+      <th>
+        Nama Buku
+      </th>
+      <th>
+        Jumlah
+      </th>
+      <th>
+        Total 
+      </th>
+      <th>
+        Action
+      </th>
+    </tr>
+  </thead>
+<tbody>
+  <tr *ngFor="let t of bukuParent; let i=index" [appHoverHighlight]="{background:'coral', text:'white'}">
+    <td>{{ i + 1}}</td>
+    <td>{{ t.isbn }}</td>
+    <td>{{ t.namabuku }}</td>
+    <td>{{ t.jumlah }}</td>
+    <td>{{ t.total }}</td>
+    <td><button (click)="deleteRow(i)" >batalkan</button> </td>
+    <td></td>
+    </tr>
+</tbody>
+</table>
